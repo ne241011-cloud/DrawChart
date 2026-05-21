@@ -11,12 +11,12 @@ app.use("/public", express.static(__dirname + "/public"));
 let dataString = "";
 
 app.get('/', (req, res) => {
-  res.render('top.ejs', { data: dataString });
+res.render('top', { data: dataString });
 });
 
 app.post('/', (req, res) => {
   dataString = req.body.data;
-  res.render('top.ejs', { data: dataString });
+res.render('top', { data: dataString });
 });
 
 app.listen(process.env.PORT || PORT, () => {
