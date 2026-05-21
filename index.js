@@ -19,5 +19,7 @@ app.post('/', (req, res) => {
   res.render('top.ejs', { data: dataString });
 });
 
-app.listen(process.env.PORT || PORT);
+app.listen(process.env.PORT || PORT, () => {
+  console.log("Server started");
+});
     
